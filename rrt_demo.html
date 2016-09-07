@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8"/>
+  <title>RRT demo</title>
+  <link rel="stylesheet" href="tufte.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="thirdparty/react.min.js"></script>
+  <script src="thirdparty/react-dom.min.js"></script>
+  <script src="thirdparty/browser.min.js"></script>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
+  <style>
+  .rrt_svg {
+    border: 2px solid black;
+  }
+  </style>
+</head>
+
+<body>
+  <article>
+    <h1 id="tufte-css">RRT demo</h1>
+    <p class="subtitle"></p>
+    <section>
+      <p>The rapidly-exploring random tree is a general sampling-based technique for exploring a metric space<sup><a class="footnote-link" href="#fn1">1</a></sup><a name="fn1origin"></a>, but I'm mostly interested in its applications as a motion planning algorithm for robots. I made these simulations of RRTs exploring \(\mathbb{R}^2\) to help myself get an intuition for how RRTs work. One day, I hope to extend these simulations to \(\mathbb{R}^3\) and other spaces to see how RRTs do in different topologies.</p>
+      <p><a href="kkd10_rrt_ann.pdf">RRT-ANN</a> is a word I made up to refer to RRTs that use an approximate nearest-neighbor subroutine in place of an exact nearest-neighbor one.</p>
+      <p>There are some strikingly similar examples in nature (<a href="https://www.youtube.com/watch?v=mvBSkt6LhJE">video</a>).</p>
+    </section>
+    <h2 className="rrt_svg">RRT expansion</h2>
+    <section id="expandRRT"></section>
+    <h2>RRT-ANN expansion</h2>
+    <section id="expandRRTANN"></section>
+    <h2>Random expansion</h2>
+    <section id="expandRandom"></section>
+    <div class="thin-black-line"></div>
+    <section>
+      <p class="footnote"><sup><a class="footnote-link" href="#fn1">1</a></sup> <a name="fn1"></a>LaValle, Steven M. "Rapidly-Exploring Random Trees: A New Tool for Path Planning." (1998). [<a href="#fn1origin">back</a>]</p>
+    </section>
+  </article>
+  <script type="text/babel" src="rrt_demo.jsx"></script>
+<!--<script src="rrt_demo.js"></script>-->
+</body>
+</html>
